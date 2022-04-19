@@ -1,1 +1,1 @@
-console.log('yode'); 
+import './partials/header';
