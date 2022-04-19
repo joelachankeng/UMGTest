@@ -1,18 +1,8 @@
-@import './vendor/tailwind';
-@import '../../../wordpress/wp-content/themes/twentytwentyone/dist/_variables';
-@import '../../../wordpress/wp-content/themes/twentytwentyone/dist/_wp_variables';
 
-$color : #ffff;
-
-@mixin ftw {
-    background: rgb(33, 6, 189);
-    content: 'UP';
-}
-body {
-    background: $theme-color  !important;
-    border: 1px solid purple;
-    a {
-        color: rgb(21, 23, 146);
-        @include ftw();
-    }
-}
+@import 'vendor/tailwind';
+@import 'partials/base';
+@import 'partials/header';
+@import 'partials/footer';
+@import 'partials/fonts';
+@import 'partials/responsive';
+@import 'partials/page';

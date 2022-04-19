@@ -1,0 +1,13 @@
+body {
+    font-family: $font-main;
+    font-size: 16px;
+    line-height: 25px;
+    font-weight: 400;
+    color: $color-primary;
+    background-color: $white;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    &.page-homepage {
+        background-color: $light-pink;
+    }
+}
