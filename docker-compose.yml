@@ -1,0 +1,91 @@
+version: '3.9'
+
+services:
+    # nginx:
+    #     container_name: wp_umgtest_nginx
+    #     build:
+    #       context: .
+    #       dockerfile: nginx.dockerfile
+    #     ports:
+    #       - 80:80
+    #     expose:
+    #     - 80
+    #     volumes:
+    #       - ./wordpress:/var/www/html:delegated
+    #     depends_on:
+    #       #- php
+    #       - wordpress
+    #       - mysql
+    #       - composer
+    #       - npm
+    mysql:
+        container_name: wp_umgtest_mysql
+        image: mysql:latest
+        restart: always
+        ports:
+            - 3306:3306
+        environment:
+            MYSQL_DATABASE: wp
+            MYSQL_USER: wp
+            MYSQL_PASSWORD: umg
+            MYSQL_ROOT_PASSWORD: umg
+        volumes:
+            - ./mysql:/var/lib/mysql
+    phpmyadmin:
+        container_name: wp_umgtest_phpmyadmin
+        image: phpmyadmin/phpmyadmin:latest
+        restart: always
+        environment:
+            PMA_HOST: mysql
+            PMA_USER: wp
+            PMA_PASSWORD: umg
+        ports:
+            - "8080:80"
+    # php:
+    #     container_name: wp_umgtest_php
+    #     build:
+    #         context: .
+    #         dockerfile: php.dockerfile
+    #     volumes:
+    #         - ./wordpress:/var/www/html:delegated
+    composer:
+        container_name: wp_umgtest_composer
+        build:
+            context: .
+            dockerfile: composer.dockerfile
+        volumes:
+            - ./wordpress:/app:delegated
+    npm:
+        container_name: wp_umgtest_npm
+        ports:
+            - "3000:3000"
+            - "3001:3001"
+        build:
+            context: .
+            dockerfile: npm.dockerfile
+        volumes:
+            - ./:/app:delegated
+            - ./npm/node_modules:/app/npm/node_modules:delegated
+    wordpress:
+        container_name: wp_umgtest_wordpress
+        build:
+            context: .
+            dockerfile: wordpress.dockerfile
+        depends_on:
+            - mysql
+        restart: 'always'
+        environment:
+            WORDPRESS_DB_HOST: mysql:3306
+            WORDPRESS_DB_NAME: wp
+            WORDPRESS_DB_USER: wp
+            WORDPRESS_DB_PASSWORD: umg
+            WORDPRESS_DEBUG: "true"
+        ports:
+            - 80:80
+            - 8443:443
+        expose:
+                - 80
+        volumes:
+            - ./wordpress/wp-content/uploads:/var/www/html/wp-content/uploads:delegated
+            - ./wordpress/wp-content/plugins:/var/www/html/wp-content/plugins:delegated
+            - ./wordpress/wp-content/themes:/var/www/html/wp-content/themes:delegated
