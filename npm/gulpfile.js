@@ -61,7 +61,7 @@ Gulp Tasks
 let sync = (cb) => {
   //start browsersync
   browserSync.init({
-    proxy: "http://wordpress/",
+    proxy: "http://localhost/",
     notify: false,
     // Do not open browser on start
     open: false
@@ -83,14 +83,14 @@ let run = () => {
 
 let watches = () => {
 
-  // gulp.watch([
-  //   paths.watch.php,
-  // ],{ usePolling: true }).on('change', function(file) {
-  //   // console.log(file);
-  //   // compilePHP(paths.watch.php);
-  //   // compileStyles(paths.src.style);
-    
-  // });
+  gulp.watch([
+    paths.watch.php,
+  ],{ usePolling: true }).on('change', function(file) {
+    // console.log(file);
+    // compilePHP(paths.watch.php);
+    compileStyles(paths.src.style);
+    browserSync.reload();
+  });
 
   gulp.watch([
     paths.watch.styles,
@@ -215,4 +215,4 @@ async function compressImages(filepath) {
   .pipe(gulp.dest('./compress-images/uploads/'))
 }
 
-exports.default = gulp.parallel(defaultTask); 
+exports.default = gulp.parallel(defaultTask, sync); 
