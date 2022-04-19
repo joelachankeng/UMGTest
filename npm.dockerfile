@@ -8,7 +8,7 @@ FROM node:14.17.0-alpine3.13
 
 # RUN apt update && apt install build-essential && apt install python
 
-RUN npm install --global gulp && npm link gulp
+# RUN npm install --global gulp && npm link gulp
 
 COPY ./npm-entrypoint.sh /
 

@@ -55,17 +55,17 @@ services:
             dockerfile: composer.dockerfile
         volumes:
             - ./wordpress:/app:delegated
-    npm:
-        container_name: wp_umgtest_npm
-        ports:
-            - "3000:3000"
-            - "3001:3001"
-        build:
-            context: .
-            dockerfile: npm.dockerfile
-        volumes:
-            - ./:/app:delegated
-            - ./npm/node_modules:/app/npm/node_modules:delegated
+    # npm:
+    #     container_name: wp_umgtest_npm
+    #     ports:
+    #         - "3000:3000"
+    #         - "3001:3001"
+    #     build:
+    #         context: .
+    #         dockerfile: npm.dockerfile
+    #     volumes:
+    #         - ./:/app:delegated
+    #         - ./npm/node_modules:/app/npm/node_modules:delegated
     wordpress:
         container_name: wp_umgtest_wordpress
         build:
