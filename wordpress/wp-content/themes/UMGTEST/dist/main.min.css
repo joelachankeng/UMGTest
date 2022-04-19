@@ -1,0 +1,533 @@
+@import url(https://fonts.googleapis.com/css?family=Poppins:300,400,600);
+/*! tailwindcss v2.1.4 | MIT License | https://tailwindcss.com*/
+/*! modern-normalize v1.1.0 | MIT License | https://github.com/sindresorhus/modern-normalize */
+html {
+  -webkit-text-size-adjust: 100%;
+  line-height: 1.15;
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+  tab-size: 4
+}
+body {
+  font-family: system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
+  margin: 0
+}
+hr {
+  color: inherit;
+  height: 0
+}
+abbr[title] {
+  -webkit-text-decoration: underline dotted;
+  text-decoration: underline dotted
+}
+b,
+strong {
+  font-weight: bolder
+}
+code,
+kbd,
+pre,
+samp {
+  font-family: ui-monospace,SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
+  font-size: 1em
+}
+small {
+  font-size: 80%
+}
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline
+}
+sub {
+  bottom: -.25em
+}
+sup {
+  top: -.5em
+}
+table {
+  border-color: inherit;
+  text-indent: 0
+}
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0
+}
+button,
+select {
+  text-transform: none
+}
+[type=button],
+[type=reset],
+[type=submit],
+button {
+  -webkit-appearance: button
+}
+legend {
+  padding: 0
+}
+progress {
+  vertical-align: baseline
+}
+[type=search] {
+  -webkit-appearance: textfield;
+  outline-offset: -2px
+}
+summary {
+  display: list-item
+}
+blockquote,
+dd,
+dl,
+figure,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+p,
+pre {
+  margin: 0
+}
+button {
+  background-color: transparent;
+  background-image: none
+}
+button:focus {
+  outline: 1px dotted;
+  outline: 5px auto -webkit-focus-ring-color
+}
+fieldset,
+ol,
+ul {
+  margin: 0;
+  padding: 0
+}
+ol,
+ul {
+  list-style: none
+}
+html {
+  font-family: ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
+  line-height: 1.5
+}
+body {
+  font-family: inherit;
+  line-height: inherit
+}
+*,
+:after,
+:before {
+  border: 0 solid;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box
+}
+hr {
+  border-top-width: 1px
+}
+img {
+  border-style: solid
+}
+textarea {
+  resize: vertical
+}
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+  color: #a1a1aa;
+  opacity: 1
+}
+input::-moz-placeholder,
+textarea::-moz-placeholder {
+  color: #a1a1aa;
+  opacity: 1
+}
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder {
+  color: #a1a1aa;
+  opacity: 1
+}
+input::-ms-input-placeholder,
+textarea::-ms-input-placeholder {
+  color: #a1a1aa;
+  opacity: 1
+}
+input::placeholder,
+textarea::placeholder {
+  color: #a1a1aa;
+  opacity: 1
+}
+[role=button],
+button {
+  cursor: pointer
+}
+table {
+  border-collapse: collapse
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit
+}
+a {
+  color: inherit;
+  text-decoration: inherit
+}
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  line-height: inherit;
+  padding: 0
+}
+code,
+kbd,
+pre,
+samp {
+  font-family: ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace
+}
+audio,
+canvas,
+embed,
+iframe,
+img,
+object,
+svg,
+video {
+  display: block;
+  vertical-align: middle
+}
+img,
+video {
+  height: auto;
+  max-width: 100%
+}
+.container {
+  width: 100%
+}
+@media (min-width:640px) {
+  .container {
+    max-width: 640px
+  }
+}
+@media (min-width:768px) {
+  .container {
+    max-width: 768px
+  }
+}
+@media (min-width:1024px) {
+  .container {
+    max-width: 1024px
+  }
+}
+@media (min-width:1280px) {
+  .container {
+    max-width: 1280px
+  }
+}
+@media (min-width:1536px) {
+  .container {
+    max-width: 1536px
+  }
+}
+.bg-accent {
+  --tw-bg-opacity: 1;
+  background-color: #f05a28
+}
+.border {
+  border-width: 1px
+}
+.block {
+  display: block
+}
+.inline {
+  display: inline
+}
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex
+}
+.table {
+  display: table
+}
+.table-row {
+  display: table-row
+}
+.grid {
+  display: grid
+}
+.contents {
+  display: contents
+}
+.hidden {
+  display: none
+}
+.flex-col {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column
+}
+.flex-wrap {
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap
+}
+.items-center {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center
+}
+.justify-center {
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center
+}
+.justify-between {
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between
+}
+.flex-grow {
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1
+}
+.h-0 {
+  height: 0
+}
+.h-6 {
+  height: 1.5rem
+}
+.h-full {
+  height: 100%
+}
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto
+}
+.object-contain {
+  -o-object-fit: contain;
+  object-fit: contain
+}
+.static {
+  position: static
+}
+.fixed {
+  position: fixed
+}
+.relative {
+  position: relative
+}
+.sticky {
+  position: sticky
+}
+* {
+  --tw-shadow: 0 0 transparent;
+  --tw-ring-inset: var(--tw-empty, );
+  /*!*//*!*/--tw-ring-offset-width: 0px;
+  --tw-ring-offset-color: #fff;
+  --tw-ring-color: rgba(59,130,246,0.5);
+  --tw-ring-offset-shadow: 0 0 transparent;
+  --tw-ring-shadow: 0 0 transparent
+}
+.truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap
+}
+.italic {
+  font-style: italic
+}
+.uppercase {
+  text-transform: uppercase
+}
+.lowercase {
+  text-transform: lowercase
+}
+.underline {
+  text-decoration: underline
+}
+.visible {
+  visibility: visible
+}
+.w-full {
+  width: 100%
+}
+.transform {
+  --tw-translate-x: 0;
+  --tw-translate-y: 0;
+  --tw-rotate: 0;
+  --tw-skew-x: 0;
+  --tw-skew-y: 0;
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+  -webkit-transform: translateX(var(--tw-translate-x)) translateY(var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  transform: translateX(var(--tw-translate-x)) translateY(var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))
+}
+@-webkit-keyframes spin {
+  to {
+    -webkit-transform: rotate(1turn);
+    transform: rotate(1turn)
+  }
+}
+@keyframes spin {
+  to {
+    -webkit-transform: rotate(1turn);
+    transform: rotate(1turn)
+  }
+}
+@-webkit-keyframes ping {
+  75%,
+  to {
+    opacity: 0;
+    -webkit-transform: scale(2);
+    transform: scale(2)
+  }
+}
+@keyframes ping {
+  75%,
+  to {
+    opacity: 0;
+    -webkit-transform: scale(2);
+    transform: scale(2)
+  }
+}
+@-webkit-keyframes pulse {
+  50% {
+    opacity: .5
+  }
+}
+@keyframes pulse {
+  50% {
+    opacity: .5
+  }
+}
+@-webkit-keyframes bounce {
+  0%,
+  to {
+    -webkit-animation-timing-function: cubic-bezier(.8,0,1,1);
+    animation-timing-function: cubic-bezier(.8,0,1,1);
+    -webkit-transform: translateY(-25%);
+    transform: translateY(-25%)
+  }
+  50% {
+    -webkit-animation-timing-function: cubic-bezier(0,0,.2,1);
+    animation-timing-function: cubic-bezier(0,0,.2,1);
+    -webkit-transform: none;
+    transform: none
+  }
+}
+@keyframes bounce {
+  0%,
+  to {
+    -webkit-animation-timing-function: cubic-bezier(.8,0,1,1);
+    animation-timing-function: cubic-bezier(.8,0,1,1);
+    -webkit-transform: translateY(-25%);
+    transform: translateY(-25%)
+  }
+  50% {
+    -webkit-animation-timing-function: cubic-bezier(0,0,.2,1);
+    animation-timing-function: cubic-bezier(0,0,.2,1);
+    -webkit-transform: none;
+    transform: none
+  }
+}
+.filter {
+  --tw-blur: var(--tw-empty, );
+  /*!*//*!*/--tw-brightness: var(--tw-empty, );
+  /*!*//*!*/--tw-contrast: var(--tw-empty, );
+  /*!*//*!*/--tw-grayscale: var(--tw-empty, );
+  /*!*//*!*/--tw-hue-rotate: var(--tw-empty, );
+  /*!*//*!*/--tw-invert: var(--tw-empty, );
+  /*!*//*!*/--tw-saturate: var(--tw-empty, );
+  /*!*//*!*/--tw-sepia: var(--tw-empty, );
+  /*!*//*!*/--tw-drop-shadow: var(--tw-empty, );
+  /*!*//*!*/-webkit-filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)
+}
+this_is_need_for_sass_to_compile_this_file_as_a_standalone {
+  content: ""
+}
+.color-primary {
+  color: #5d516c!important
+}
+.color-primary.hover-secondary:hover,
+.color-secondary {
+  color: #83be43!important
+}
+.color-secondary.hover-primary:hover {
+  color: #5d516c!important
+}
+.font-main {
+  font-family: Poppins,sans-serif!important
+}
+header {
+  margin: 25px 0;
+  -webkit-transition: top .5s ease,-webkit-transform .5s ease;
+  transition: top .5s ease,-webkit-transform .5s ease;
+  transition: transform .5s ease,top .5s ease;
+  transition: transform .5s ease,top .5s ease,-webkit-transform .5s ease
+}
+header.pre-sticky {
+  -webkit-transform: translateY(-100%);
+  transform: translateY(-100%)
+}
+header.sticky {
+  background: #fff;
+  -webkit-box-shadow: 2px 7px 17.82px .18px hsla(5,60%,74%,.2);
+  box-shadow: 2px 7px 17.82px .18px hsla(5,60%,74%,.2);
+  margin: 0;
+  padding: 10px 0;
+  position: fixed;
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+  width: 100%;
+  z-index: #100
+}
+header .container .logo {
+  width: 150px
+}
+header .container .header-navigation .main-menu {
+  padding: 0 250px
+}
+header .container .header-navigation .main-menu li a {
+  color: #38214a;
+  font-weight: 600;
+  letter-spacing: -.01em
+}
+header .container .header-navigation .main-menu li.current-menu-item a {
+  color: rgba(56,33,74,.5)
+}
+body,
+header .container .header-navigation .main-menu li:hover a {
+  color: #5d516c
+}
+body {
+  -webkit-font-smoothing: antialiased;
+  background-color: #fff;
+  font-family: Poppins,sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 25px;
+  overflow-x: hidden
+}
+body.page-homepage {
+  background-color: #f8e7e5
+}
+/*# sourceMappingURL=main.min.css.map */
