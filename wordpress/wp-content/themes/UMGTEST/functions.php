@@ -1,4 +1,8 @@
 <?php
+
+    // Add ACF custom blocks
+    require_once "blocks/blocks.php";
+
     // Register WP menus
     function register_my_menus() {
         register_nav_menus(
@@ -27,4 +31,11 @@
         'flex-width'  => true,
         'header-text' => array( 'site-title', 'site-description' ),
     ) );
+
+    // Allow SVGs uploads
+    function my_own_mime_types( $mimes ) {
+        $mimes['svg'] = 'image/svg+xml';
+        return $mimes;
+    }
+    add_filter( 'upload_mimes', 'my_own_mime_types' );
 ?>
