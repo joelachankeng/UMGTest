@@ -1,0 +1,32 @@
+
+.block-section-heading {
+    margin: 50px 0;
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+
+        .section-title {
+            font-weight: 700;
+            color: $dark-purple;
+            font-size: 44px;
+            line-height: 1.1em;
+            letter-spacing: -.005em;
+            -ms-word-wrap: break-word;
+            word-wrap: break-word;
+
+            @media only screen and (max-width: $screen-sm) {
+                font-size: 40px;
+            }
+        }
+
+        .subtitle {
+            margin-top: 15px;
+            font-weight: 400;
+        }
+    }
+}
+
