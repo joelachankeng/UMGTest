@@ -10,10 +10,12 @@
   "author": "Joelparkin Achankeng",
   "license": "ISC",
   "dependencies": {
+    "@babel/runtime": "^7.17.9",
     "yargs": "^14.2.3"
   },
   "devDependencies": {
     "@babel/core": "^7.11.6",
+    "@babel/plugin-transform-runtime": "^7.17.0",
     "@babel/preset-env": "^7.11.5",
     "@babel/register": "^7.11.5",
     "autoprefixer": "^10.2.5",

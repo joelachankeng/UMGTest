@@ -18,7 +18,8 @@
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
-	<link rel="profile" href="http://gmpg.org/xfn/11">	
+	<link rel="profile" href="http://gmpg.org/xfn/11">
+	<script src="https://sdk.scdn.co/spotify-player.js"></script>	
 	<?php 
 		wp_head();
 		wp_site_icon();
@@ -37,12 +38,14 @@
 	</title>
 </head>
 <body class="<?php if ( is_front_page() ) { echo "page-homepage";}?> <?php  echo esc_attr( implode( ' ', get_post_class())) ; ?> " id="post-<?php echo the_ID(); ?>">
-	<header>
-		<div class="container mx-auto flex items-center ">
+	<header class="bg-white md:bg-transparent">
+		<div class="container mx-auto flex items-center">
 			<div class="logo">
-				<img src="<?php echo $custom_logo_url;?>" alt="<?php echo get_bloginfo('name');?> " class="h-full w-full object-contain">
+				<a href="/">
+					<img src="<?php echo $custom_logo_url;?>" alt="<?php echo get_bloginfo('name');?> " class="h-full w-full object-contain">
+				</a>
 			</div>
-			<nav class="header-navigation w-full">
+			<nav class="header-navigation w-full hidden md:block">
 				<?php
 					wp_nav_menu( array( 
 						'theme_location' => 'main-menu', 
@@ -52,6 +55,22 @@
 					); 
 				?>
 			</nav>
-
+			<button class="mobile-menu hidden cursor-pointer md:hidden">
+				<i class="fad fa-bars icon-open"></i>
+				<i class="fad fa-times icon-close hidden"></i>
+			</button>
 		</div>
+		<nav class="header-mobile-navigation w-full hidden">
+			<div class="container mx-auto">
+				<?php
+					wp_nav_menu( array( 
+						'theme_location' => 'main-menu', 
+						'container_class' => 'main-menu',
+						'menu_class' => 'flex flex-col items-start'
+						) 
+					); 
+				?>
+
+			</div>
+		</nav>
 	</header>

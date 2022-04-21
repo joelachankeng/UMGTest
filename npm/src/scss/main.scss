@@ -1,8 +1,18 @@
 
 @import 'vendor/tailwind';
+@import 'vendor/slick.min';
+@import 'vendor/fontawesome.min';
+
 @import 'partials/base';
 @import 'partials/header';
 @import 'partials/footer';
 @import 'partials/fonts';
-@import 'partials/responsive';
 @import 'partials/page';
+
+@import 'blocks/block-hero-slider';
+@import 'blocks/block-music-bar.scss';
+@import 'blocks/block-section-heading.scss';
+@import 'blocks/block-discography.scss';
+@import 'blocks/block-tours.scss';
+@import 'blocks/block-youtube-slider.scss';
+
