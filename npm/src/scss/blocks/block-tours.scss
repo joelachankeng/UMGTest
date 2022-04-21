@@ -1,0 +1,92 @@
+
+.block-tour-list {
+    background-image: url('/wp-content/uploads/2022/04/h1-bck-img-02.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 50px 0;
+
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .tours {
+            display: flex;
+            flex-direction: column;
+            padding: 50px;
+            background-color: rgba(255, 255, 255, .55);
+            border-radius: 5px;
+            -webkit-box-shadow: 2px 7px 17.82px 0.18px rgba(228, 155, 148, .20);
+            box-shadow: 2px 7px 17.82px 0.18px rgba(228, 155, 148, .20);
+            -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            max-width: 700px;
+            width: 100%;
+
+            .tour {
+                display: flex;
+                align-items: start;
+                width: 100%;
+                margin: 25px 0;
+                font-weight: 700;
+                color: $dark-purple;
+                font-size: 18px;
+                line-height: 1.315789473684211em;
+                letter-spacing: -.005em;
+                font-weight: 600;
+                -ms-word-wrap: break-word;
+                word-wrap: break-word;
+
+                @media only screen and (max-width: $screen-sm) {
+                    flex-direction: column;
+                    align-items: center;
+                }
+
+                .tour-date {
+                    padding-right: 30px;
+
+                    @media only screen and (max-width: $screen-sm) {
+                        padding: 0;
+                    }
+                }
+
+                .tour-location {
+                    display: flex;
+                    flex-direction: column;
+                    flex: 1;
+
+                    @media only screen and (max-width: $screen-sm) {
+                        align-items: center;
+                        margin: 10px 0;
+                    }
+
+                    .tour-building {}
+
+                    .tour-city {
+                        font-weight: normal;
+                        font-size: 16px;
+                    }
+
+                    .tour-country {
+                        font-weight: normal;
+                        font-size: 16px;
+                        padding-left: 3px;
+                    }
+                }
+
+                .tour-cta {
+
+                    &:hover {}
+
+
+                }
+
+            }
+
+        }
+    }
+}
+

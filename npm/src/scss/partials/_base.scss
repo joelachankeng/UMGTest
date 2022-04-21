@@ -1,15 +1,61 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:300,400,600');
 
-$color-primary: #5d516c;
-$color-secondary: #83be43;
-$light-pink: #f8e7e5;
-$grey: #b1b1b1;
+$color-primary          : #5d516c;
+$color-secondary        : #83be43;
+$light-pink             : #f8e7e5;
+$grey                   : #b1b1b1;
+$light-puple            : #8b8395;
+$dark-purple            : #38214a;
 
-
-$white : #ffffff;
-$black : #000;
+$white                  : #ffffff;
+$black                  : #000;
 
 $font-main: 'Poppins', sans-serif;
+
+$font-size-base:          16px !default;
+$font-size-large:         ceil(($font-size-base * 1.25)) !default; // ~18px
+$font-size-small:         ceil(($font-size-base * 0.85)) !default; // ~12px
+
+$font-size-h1:            56px !default;
+$font-size-h2:            40px !default;
+$font-size-h3:            34px !default;
+$font-size-h4:            20px !default;
+$font-size-h5:            18px !default;
+$font-size-h6:            16px !default;
+
+//== Media queries breakpoints
+// Extra small screen / phone
+$screen-xs:                  480px !default;
+$screen-xs-min:              $screen-xs !default;
+$screen-phone:               $screen-xs-min !default;
+
+// Small screen / tablet
+$screen-sm:                  768px !default;
+$screen-sm-min:              $screen-sm !default;
+$screen-tablet:              $screen-sm-min !default;
+
+// Medium screen / desktop
+$screen-md:                  992px !default;
+$screen-md-min:              $screen-md !default;
+$screen-desktop:             $screen-md-min !default;
+
+// Large screen / wide desktop
+$screen-lg:                  1200px !default;
+$screen-lg-min:              $screen-lg !default;
+$screen-lg-desktop:          $screen-lg-min !default;
+
+// Extra large  / extra wide desktop for handling global header
+$screen-xl:					 1300px !default;
+$screen-xl-min:              $screen-xl !default;
+
+// So media queries don't overlap when required, provide a maximum
+$screen-xs-max:              ($screen-sm-min - 1) !default;
+$screen-sm-max:              ($screen-md-min - 1) !default;
+$screen-md-max:              ($screen-lg-min - 1) !default;
+$screen-lg-max:              ($screen-xl-min - 1) !default;
+
+
+
 
 .color-primary {
     color: $color-primary !important;
@@ -32,3 +78,97 @@ $font-main: 'Poppins', sans-serif;
     font-family: $font-main !important;
 }
 
+.container  {
+    padding-left: 15px;
+    padding-right: 15px;
+    &.padding-none {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+}
+
+.floating {  
+    animation-name: floating;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    margin-left: 30px;
+    margin-top: 5px;
+}
+
+@keyframes floating {
+    from { transform: translate(0,  0px); }
+    65%  { transform: translate(0, 15px); }
+    to   { transform: translate(0, -0px); }    
+}
+
+.button {
+    color: #38214A;
+    background-color: #FCF5F5;
+    box-shadow: 0px 0px 15px 0px rgba(245, 216, 212,  .67);
+    padding: 15px 67px;
+    margin: 10px 0;
+    font-size: 14px;
+    line-height: 2em;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 4em;
+    outline: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-transition: color .35s ease-out,background-color .35s ease-out,border-color .35s ease-out,all .35s ease-out;
+    -o-transition: color .35s ease-out,background-color .35s ease-out,border-color .35s ease-out,all .35s ease-out;
+    transition: color .35s ease-out,background-color .35s ease-out,border-color .35s ease-out,all .35s ease-out;
+    &.disabled {
+        cursor: not-allowed;
+        -webkit-filter: grayscale(1);
+        filter: grayscale(24);
+        background-color: #292929;
+        color: #fff;
+    }
+    &.button-sm {
+        padding: 7px 38px;
+    }
+    
+    &:hover {
+        background-color: #38214A;
+        color: #FCF5F5;
+    }
+
+}
+
+@-webkit-keyframes rotating /* Safari and Chrome */ {
+    from {
+      -webkit-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    to {
+      -webkit-transform: rotate(360deg);
+      -o-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }
+  @keyframes rotating {
+    from {
+      -ms-transform: rotate(0deg);
+      -moz-transform: rotate(0deg);
+      -webkit-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    to {
+      -ms-transform: rotate(360deg);
+      -moz-transform: rotate(360deg);
+      -webkit-transform: rotate(360deg);
+      -o-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }
+  .rotating {
+    -webkit-animation: rotating 25s linear infinite;
+    -moz-animation: rotating 25s linear infinite;
+    -ms-animation: rotating 25s linear infinite;
+    -o-animation: rotating 25s linear infinite;
+    animation: rotating 25s linear infinite;
+  }

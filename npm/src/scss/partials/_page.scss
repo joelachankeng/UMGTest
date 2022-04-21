@@ -7,7 +7,10 @@ body {
     background-color: $white;
     overflow-x: hidden;
     -webkit-font-smoothing: antialiased;
+    margin:0px; 
+    padding:0px;
     &.page-homepage {
         background-color: $light-pink;
     }
 }
+
