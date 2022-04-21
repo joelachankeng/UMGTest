@@ -1,0 +1,101 @@
+.block-discography {
+    .container {
+        .albums {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+
+            .album {
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                position: relative;
+                width: #{'calc(100% / 3)'};
+                margin: 55px 0;
+
+                &:nth-child(3n+2) {
+                    margin-top: 150px;
+                }
+
+                @media only screen and (max-width: $screen-sm) {
+                    width: #{'calc(100% / 2)'};
+                    margin: 15px 0;
+
+                    &:nth-child(3n+2) {
+                        margin-top: 15px;
+                    }
+
+                    &:nth-child(even) {
+                        margin-top: -45px;
+                    }
+                }
+
+                @media only screen and (max-width: $screen-xs) {
+                    width: 100%;
+                    margin: 25px 0;
+
+                    &:nth-child(even) {
+                        margin-top: 25px;
+                    }
+                }
+
+                .album-cta {
+                    width: 100%;
+                    padding: 0 25px;
+                    z-index: 1;
+
+                    .album-cover {
+                        border-radius: 10px;
+                        height: 500px;
+                        width: 100%;
+                        background-position: center;
+                        background-size: cover;
+                        background-repeat: no-repeat;
+
+                        @media only screen and (max-width: $screen-sm) {
+                            height: 300px;
+                        }
+                    }
+
+                    .album-title {
+                        margin-top: 25px;
+                        font-weight: 700;
+                        color: $dark-purple;
+                        font-size: 18px;
+                        line-height: 1.3em;
+                        letter-spacing: -.005em;
+                        font-weight: 600;
+                    }
+                    .album-artist {
+                        span {
+                            &:after {
+                                content: ' , ';
+                            }
+                            &:last-child {
+                                &:after {
+                                    display: none;
+                                }
+                            }
+                        }
+                    }
+
+                    p {
+                        margin-top: 5px;
+                    }
+
+                    &:hover {}
+
+                    &:active {}
+
+                    &:focus {}
+                }
+
+            }
+
+        }
+
+        .view-more.button {
+           
+        }
+    }
+}
