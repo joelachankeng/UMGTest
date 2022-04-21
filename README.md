@@ -1,6 +1,6 @@
 # UMGTest
 
-You can view the live site here:
+You can view the live site here: https://54.87.136.149/
 
 I wasn't able fix all the ADA issues. I kept the minimum font to 16px of ADA regulations.
 
