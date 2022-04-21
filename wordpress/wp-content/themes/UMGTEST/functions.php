@@ -33,9 +33,20 @@
     ) );
 
     // Allow SVGs uploads
-    function my_own_mime_types( $mimes ) {
+    function custom_mime_types( $mimes ) {
         $mimes['svg'] = 'image/svg+xml';
         return $mimes;
     }
-    add_filter( 'upload_mimes', 'my_own_mime_types' );
+    add_filter( 'upload_mimes', 'custom_mime_types' );
+
+    add_filter( 'wp_check_filetype_and_ext', function( $mime, $file, $filename, $mimes ) {
+        $wp_filetype = wp_check_filetype( $filename, $mimes );
+        if ( in_array( $wp_filetype['ext'], [ 'svg' ] ) ) {
+            $mime['ext']  = true;
+            $mime['type'] = true;
+        }
+        return $mime;
+    }, 10, 4 );
+
+    
 ?>
