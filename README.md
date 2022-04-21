@@ -2,9 +2,7 @@
 
 You can view the live site here:
 
-
-I did not have enough time to fixed the responsive issues across all browsers.
-Also wasn't able fix all the ADA issues. I kept the minimum font to 16px of ADA regulations.
+I wasn't able fix all the ADA issues. I kept the minimum font to 16px of ADA regulations.
 
 ## How to run locally
 
@@ -28,7 +26,7 @@ docker-compose up --force-recreate --build -d
 
 6. Select the Import tab on the menu
 
-7. Import the latestDB.sql file from this repository.
+7. Import the wp.sql file from this repository.
 
 
 ## How to run NPM
