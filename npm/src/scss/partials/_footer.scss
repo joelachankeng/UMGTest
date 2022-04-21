@@ -1,0 +1,103 @@
+.footer {
+    margin: 50px 0 100px;
+
+    @media only screen and (max-width: $screen-sm) {
+        margin-top: 20px;
+
+    }
+
+    .container {
+
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        align-items: center;
+
+        @media only screen and (max-width: $screen-sm) {
+            flex-direction: column;
+        }
+    }
+
+    .copyright-column {
+        .logo {
+            height: 120px;
+            width: 120px;
+            position: relative;
+
+            a {
+
+                img {}
+            }
+        }
+
+        .copyright-text {}
+    }
+
+    .social-menu-column {
+        #menu-social-menu {
+            font-size: 0;
+            justify-content: flex-end;
+
+            @media only screen and (max-width: $screen-sm) {
+                justify-content: flex-start;
+                margin-top: 15px;
+            }
+
+            li {
+                font-family: Font Awesome\ 5 Brands;
+                font-weight: 400;
+                padding: 0 20px;
+
+                &:hover {
+                    color: #2b1849;
+                }
+
+                &.facebook {
+                    a {
+                        &:after {
+                            font-size: 30px;
+                            content: "\f39e";
+                        }
+                    }
+                }
+
+                &.Instagram {
+                    a {
+                        &:after {
+                            font-size: 30px;
+                            content: "\f16d";
+                        }
+                    }
+                }
+
+                &.Twitter {
+                    a {
+                        &:after {
+                            font-size: 30px;
+                            content: "\f099";
+                        }
+                    }
+                }
+
+                &.youtube {
+                    a {
+                        &:after {
+                            font-size: 30px;
+                            content: "\f167";
+                        }
+                    }
+                }
+
+                &.soundcloud {
+                    a {
+                        &:after {
+                            font-size: 30px;
+                            content: "\f1be";
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+}
