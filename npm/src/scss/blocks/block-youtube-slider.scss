@@ -1,0 +1,158 @@
+
+.youtube-slider {
+    .video-slider {
+        display: flex;
+        align-items: center;
+
+        .slick-arrow {
+            position: absolute;
+            color: $white;
+            font-size: 50px;
+            cursor: pointer;
+            outline: none;
+            z-index: 1;
+
+            @media only screen and (max-width: $screen-sm) {
+                font-size: 30px;
+            }
+
+            &:hover {
+                color: $color-primary;
+            }
+
+            &.slick-prev {
+                left: 50px;
+
+                @media only screen and (max-width: $screen-sm) {
+                    left: 10px;
+                }
+            }
+
+            &.slick-next {
+                right: 50px;
+
+                @media only screen and (max-width: $screen-sm) {
+                    right: 10px;
+                }
+            }
+        }
+
+        .slide {
+            height: 500px;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin: 0 25px;
+
+            @media only screen and (max-width: $screen-xs) {
+                margin: 0;
+            }
+
+            .play-video {
+                outline: none;
+                position: relative;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 230px;
+                width: 230px;
+                border-radius: 50%;
+                -webkit-box-sizing: border-box;
+                box-sizing: border-box;
+                background: rgba(255, 255, 255, .2);
+                -webkit-backdrop-filter: blur(10px);
+                backdrop-filter: blur(10px);
+                -webkit-transition: .4s ease-out 0s;
+                -o-transition: .4s ease-out 0s;
+                transition: .4s ease-out 0s;
+                -webkit-transform: scale(.9);
+                -ms-transform: scale(.9);
+                transform: scale(.9);
+
+                i {
+                    font-size: 60px;
+                    color: $white;
+
+                    &.filled {
+                        position: absolute;
+                        opacity: 0;
+                        transition: opacity 0.3s;
+                        -webkit-transition: opacity 0.3s;
+                    }
+                }
+
+                @media only screen and (max-width: $screen-lg) {
+                    height: 150px;
+                    width: 150px;
+
+                    i {
+                        font-size: 50px;
+                    }
+                }
+
+                @media only screen and (max-width: $screen-sm) {
+                    height: 100px;
+                    width: 100px;
+
+                    i {
+                        font-size: 30px;
+                    }
+                }
+
+                &:hover {
+                    transform: scale(1);
+
+                    i {
+                        &.filled {
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+        }
+
+
+    }
+
+    .youtube-modal {
+        position: fixed;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        background: $white;
+        z-index: 9999;
+        // display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .exit-modal {
+            outline: none;
+            font-size: 40px;
+            display: flex;
+            width: 100%;
+            margin-bottom: 10px;
+
+            &:hover {}
+        }
+
+        .video-content {
+            width: 100%;
+
+            iframe {
+                width: 100%;
+                height: calc(100vh - 150px);
+            }
+        }
+    }
+}
