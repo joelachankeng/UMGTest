@@ -156,6 +156,9 @@ function compileScripts(file) {
       .transform(
         "babelify", {
           presets: ["@babel/preset-env"],
+          "plugins": [
+            ["@babel/transform-runtime"]
+          ],
           sourceMaps: true,
           global: true
         }
